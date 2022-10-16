@@ -1,14 +1,25 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "Landing page for natours",
+  "description": "THis is a advanced css project ",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jonas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gautamk01/Advance_CSS_Project_1.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gautamk01/Advance_CSS_Project_1/issues"
+  },
+  "homepage": "https://github.com/gautamk01/Advance_CSS_Project_1#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^7.0.3"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1"
   }
 }
