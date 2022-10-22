@@ -1,0 +1,8 @@
+//to clear a bug for a row they were attached to each other
+@mixin clearfix {
+  &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}

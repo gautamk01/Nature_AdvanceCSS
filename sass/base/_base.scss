@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* rem calculation is all about this font */
+  font-size: 10px;
+}
+body {
+  box-sizing: border-box;
+}

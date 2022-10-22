@@ -1,0 +1,52 @@
+/* heading Botton */
+
+.btn {
+  border-radius: 1rem;
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    &::after {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    border-radius: 1rem;
+    transition: all 0.1s;
+  }
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    /* initally it will be an inline element but inline-block will the button it's own space */
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+  }
+  &--white {
+    color: $color-gray;
+    background-color: $color-white;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--animated {
+    animation: moveInUp 0.5s ease-in 0.75s;
+    animation-fill-mode: backwards;
+  }
+}

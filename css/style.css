@@ -1,174 +1,174 @@
+/* Animation Section */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
+
 html {
   /* rem calculation is all about this font */
-  font-size: 10px;
-}
+  font-size: 10px; }
+
+body {
+  box-sizing: border-box; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box;
-}
+  padding: 3rem; }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 131, 0.8)
-    ),
-    url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-  animation: moveInleft 1s ease-in;
-}
-.header__logo {
-  height: 3.5rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.heading--primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
   /* because of the backface-visibility is not working    */
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-}
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-}
-
-/* Animation Section */
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(+10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(+10rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
 
 /* heading Botton */
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  /* initally it will be an inline element but inline-block will the button it's own space */
-  display: inline-block;
-  transition: all 0.2s;
-  position: relative;
-}
-
 .btn {
-  border-radius: 1rem;
-}
+  border-radius: 1rem; }
+  .btn:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+    .btn:hover::after {
+      transform: scale(2);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    border-radius: 1rem;
+    transition: all 0.1s; }
+  .btn:link, .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    /* initally it will be an inline element but inline-block will the button it's own space */
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative; }
+  .btn--white {
+    color: #777;
+    background-color: #fff; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--animated {
+    animation: moveInUp 0.5s ease-in 0.75s;
+    animation-fill-mode: backwards; }
 
-.btn:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-}
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-}
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    animation: moveInleft 1s ease-in; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
-.btn--white {
-  color: #777;
-  background-color: #fff;
-}
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row::after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 0;
-  z-index: -1;
-  border-radius: 1rem;
-  transition: all 0.1s;
-}
-.btn--white::after {
-  background-color: #fff;
-}
-.btn:hover::after {
-  transform: scale(2);
-  opacity: 0;
-}
-.btn--animated {
-  animation: moveInUp 0.5s ease-in 0.75s;
-  animation-fill-mode: backwards;
-}
+[class^="col-"] {
+  background-color: greenyellow;
+  float: left;
+  padding: 1.5rem;
+  border-radius: 1rem; }
+  [class^="col-"]:not(:last-child) {
+    margin-right: 6rem; }
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2); }
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3); }
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4); }
+
+.col-2-of-3 {
+  width: calc( (2 * (100% - 2 * 6rem) / 3) + 6rem); }
+
+.col-2-of-4 {
+  width: calc( (2 * (100% - 3 * 6rem) / 4) + 6rem); }
+
+.col-3-of-4 {
+  width: calc( (3 * (100% - 3 * 6rem) / 4) + 2 * 6rem); }
