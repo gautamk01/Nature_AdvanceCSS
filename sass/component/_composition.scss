@@ -1,0 +1,28 @@
+.composition {
+  position: relative;
+  &_photos {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10; //it need to higher value
+
+    &_p1 {
+      left: 0;
+      top: -2rem;
+    }
+    &_p2 {
+      right: -5%;
+      top: 0rem;
+    }
+    &_p3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      transform: scale(1.15);
+      z-index: 20; //z index should need to lower value
+    }
+  }
+}

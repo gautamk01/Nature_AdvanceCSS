@@ -4,7 +4,6 @@
 
 .row {
   max-width: $grid-width; //it is used for responsivenesss
-  background-color: #eee;
   margin: 0 auto; // to make this container on center
 
   @include clearfix;
@@ -18,7 +17,6 @@
 
 //this will select the class which starts from "col-"
 [class^="col-"] {
-  background-color: greenyellow;
   float: left;
   padding: 1.5rem;
   border-radius: 1rem;
