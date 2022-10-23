@@ -156,7 +156,20 @@ body {
   border-bottom: 1px solid #55c57a;
   padding: 0.3rem;
   transition: al;
-  transition-duration: 0.2s; }
+  transition-duration: 1s;
+  position: relative; }
+
+.btn-text::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  top: 0%;
+  left: 0;
+  z-index: -1;
+  transition: all 0.1s;
+  background-color: #55c57a;
+  position: absolute; }
 
 .btn-text:hover {
   background-color: #55c57a;
@@ -167,15 +180,19 @@ body {
 
 .btn-text:active {
   transform: translateY(0); }
+  .btn-text:active::after {
+    transform: scale(2.3);
+    opacity: 0; }
 
 .composition {
   position: relative; }
   .composition_photos {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    border-radius: 2px;
     position: absolute;
-    z-index: 10; }
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem; }
     .composition_photos_p1 {
       left: 0;
       top: -2rem; }
@@ -186,8 +203,11 @@ body {
       left: 20%;
       top: 10rem; }
     .composition_photos:hover {
+      outline: 1.5rem solid #55c57a;
       transform: scale(1.15);
       z-index: 20; }
+  .composition:hover .composition_photos:not(:hover) {
+    transform: scale(0.89); }
 
 .section-about {
   background-color: #f7f7f7;

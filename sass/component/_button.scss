@@ -51,6 +51,7 @@
   }
 }
 
+//btn in sectuin page
 .btn-text {
   &:link,
   &:visited {
@@ -61,7 +62,20 @@
     border-bottom: 1px solid $color-primary;
     padding: 0.3rem;
     transition: al;
-    transition-duration: 0.2s;
+    transition-duration: 1s;
+    position: relative;
+  }
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    top: 0%;
+    left: 0;
+    z-index: -1;
+    transition: all 0.1s;
+    background-color: $color-primary;
+    position: absolute;
   }
   &:hover {
     background-color: $color-primary;
@@ -70,7 +84,12 @@
     transform: translateY(-0.4rem);
     box-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
+
   &:active {
     transform: translateY(0);
+    &::after {
+      transform: scale(2.3);
+      opacity: 0;
+    }
   }
 }

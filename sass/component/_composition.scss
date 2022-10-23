@@ -3,9 +3,10 @@
   &_photos {
     width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
-    border-radius: 2px;
     position: absolute;
     z-index: 10; //it need to higher value
+    transition: all 0.2s;
+    outline-offset: 2rem; //this give some space between the borders
 
     &_p1 {
       left: 0;
@@ -21,8 +22,16 @@
     }
 
     &:hover {
+      outline: 1.5rem solid $color-primary; //this gives a border outline for the image
       transform: scale(1.15);
       z-index: 20; //z index should need to lower value
     }
   }
+
+  &:hover &_photos:not(:hover) {
+    transform: scale(0.89);
+  }
+  //   .composition:hover .composition_photos:not(:hover) {
+  //     transform: scale(0.89);
+  //   }
 }
