@@ -9,7 +9,9 @@
 
 @import "component/_button"; //gives all the button function here
 @import "component/_composition";
-@import "pages/home"; //if you want to style a specific page
+@import "component/_feature-box";
+
+@import "pages/_home"; //if you want to style a specific page
 
 @import "layout/header"; //Gives the specific section stylingS
 

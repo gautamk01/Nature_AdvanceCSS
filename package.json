@@ -1,10 +1,11 @@
 {
-  "name": "natours",
+  "name": "advance_css_project_1",
   "version": "1.0.0",
-  "description": "THis is a advanced css project ",
+  "description": "This is my first ",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css",
     "compile:sass:live": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/gautamk01/Advance_CSS_Project_1#readme",
   "devDependencies": {
-    "node-sass": "^7.0.3"
+    "node-sass": "^8.0.0"
   }
 }

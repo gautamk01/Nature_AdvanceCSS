@@ -78,7 +78,7 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #2be83e, #09bf79);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem; }
@@ -150,10 +150,10 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.5rem;
-  color: #55c57a;
+  color: #44bf6d;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #44bf6d;
   padding: 0.3rem;
   transition: al;
   transition-duration: 1s;
@@ -168,11 +168,11 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.1s;
-  background-color: #55c57a;
+  background-color: #44bf6d;
   position: absolute; }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #44bf6d;
   border-radius: 0.3rem;
   color: #fff;
   transform: translateY(-0.4rem);
@@ -203,21 +203,49 @@ body {
       left: 20%;
       top: 10rem; }
     .composition_photos:hover {
-      outline: 1.5rem solid #55c57a;
+      outline: 1.5rem solid #44bf6d;
       transform: scale(1.15);
       z-index: 20; }
   .composition:hover .composition_photos:not(:hover) {
     transform: scale(0.89); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    padding: 2rem;
+    background-image: linear-gradient(to right, #2be83e, #09bf79);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.02); }
 
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
 
+.section-feature {
+  padding: 20rem 0rem;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(43, 232, 62, 0.8), rgba(9, 191, 121, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  margin-top: -10rem;
+  background-position: center;
+  transform: skewY(-7deg); }
+  .section-feature > * {
+    transform: skewY(7deg); }
+
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(43, 232, 62, 0.8), rgba(9, 191, 121, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
