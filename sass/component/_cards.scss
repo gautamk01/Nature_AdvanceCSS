@@ -1,34 +1,79 @@
 .card{
-    perspective: 150rem;
-    height: 40rem;
+    perspective: 150rem; //mainly deals with the rotation of the card
+    height: 40rem;//This is height of the card
+
+    //This is the Picture Section 
     &__picture{
-        height: 21rem;
-        background-size: cover;
+        height: 21rem; //Height of the piture
+        background-size: cover; //piture size in that div
         background-blend-mode: screen; //this is used to blend the image with the linear gradent
-        clip-path: polygon(0 0 ,100% 0,100% 85%,0 100%);
+        clip-path: polygon(0 0 ,100% 0,100% 85%,0 100%);//design the image box 
+
+        //image 1 with linear gradient
         &--1{
             background-image:linear-gradient(to right bottom,$color-secondary-light,$color-secondary-drak), url("../../img/nat-5.jpg");
                             background-position: center; 
                         }
-      
+      //image 2 with linear gradient
         &--2{
             background-image:linear-gradient(to right bottom,$color-primary-light,$color-primary-dark), url("../../img/nat-6.jpg");
                             background-position: center; 
                         }
-      
+      //image 3 with linear gradient
         &--3{
             background-image:linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-drak), url("../../img/nat-7.jpg");
                             background-position: center; 
                         }
       
     }
+
+    //This the Heading for each Card
+    &__heading{
+        font-size: 2.5rem; //size of heading
+        font-weight: 300; //weight of the text
+        text-align: right;//alignment of the text
+        text-transform: uppercase; //transformation of the text
+        color: $color-white;
+        position: absolute; //positioning of the text
+        top: 12rem;
+        right: 2rem;
+        width: 72%;
+
+        &-span{
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone; //to make all the box decoration and padding to be perfect
+            padding: 1rem 1.5rem;
+            //givening heading box the coloring which it required
+            &-1{
+                background: linear-gradient(to right bottom,rgba($color-secondary-light,0.6),rgba($color-secondary-drak,0.6));
+
+            }
+
+            //giving heading box the coloring which it required
+            &-2{
+                background: linear-gradient(to right bottom,rgba($color-primary-light,0.6),rgba($color-primary-dark,0.6));
+
+            }
+
+            //giving heading box the coloring which it required
+            &-3{
+                background: linear-gradient(to right bottom,rgba($color-tertiary-light,0.6),rgba($color-tertiary-drak,0.6));
+
+            }
+          
+        }
+    }
+
+    //This is the Detail Section
     &__details
     {
+        //giveing style to the unordered list
         ul{
             list-style: none;
             width: 80%;
             margin: 0 auto;
         }
+        //giving style to the each element in the list
         li{
             text-align: center;
             font-size: 1.5rem;
@@ -43,59 +88,38 @@
 
     }
 
-    &__heading{
-        font-size: 2.5rem;
-        font-weight: 300;
-        text-align: right;
-        text-transform: uppercase;
-        color: $color-white;
-        position: absolute;
-        top: 12rem;
-        right: 2rem;
-        width: 72%;
-
-        &-span{
-
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone; //to make all the box decoration and padding to be perfect
-            padding: 1rem 1.5rem;
-            &-1{
-                background: linear-gradient(to right bottom,rgba($color-secondary-light,0.6),rgba($color-secondary-drak,0.6));
-
-            }
-
-            &-2{
-                background: linear-gradient(to right bottom,rgba($color-primary-light,0.6),rgba($color-primary-dark,0.6));
-
-            }
-            &-3{
-                background: linear-gradient(to right bottom,rgba($color-tertiary-light,0.6),rgba($color-tertiary-drak,0.6));
-
-            }
-          
-        }
-    }
+    //This is the Card side Styling 
+    //In this section the style for each front and back side is given 
     &__side{
-        text-align: center;
-        border-radius: 1rem;
-       overflow: hidden;
-    height: 40rem;
+
+    text-align: center; //text align 
+    border-radius: 1rem; //border radius
+    overflow: hidden; //overflow 
+    height: 40rem; //hight for each side
     transition: all 0.8s;
     position: absolute;
     width: 100%;
     box-shadow: 0 1.5rem 41rem rgba(0,0,0,0.1);
     backface-visibility: hidden; //hide object when object is rotate 180deg
+    //Front Side of the Card
     &--front{
         &-1{
             background-color: white;
         }
     }
+    //Back side of the Card 
     &--back{
        
-        transform: rotateY(180deg);
+        transform: rotateY(180deg);//This is the property that make the card to rotate
 
         &-1{
             background: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-drak);
+        }
+        &-2{
+            background: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+        }
+        &-3{
+            background: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-drak);
         }
     }
     }
@@ -107,5 +131,40 @@
         transform: rotateY(0deg);
     }
 
-    
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__price-box{
+        text-align: center;
+        margin-bottom: 1rem;
+        color: $color-white;
+    }
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+
+    }
+
+}
+
+.btn-card-effect{
+    &:hover{
+        background-color: $color-white;
+        &:visited{
+            color: black;
+        }
+    }
+
+    &:visited{
+        color: $color-gray-light;
+    }
+
+
 }
