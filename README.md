@@ -1,6 +1,6 @@
 # Natours | Adventure Tours - Website
 
-![Outdoors Adventure Tours Preview](./image1.jpg)
+![Outdoors Adventure Tours Preview](./image1.png)
 
 A modern, responsive website designed for showcasing adventure tours. This project was built using advanced CSS techniques and SASS, making the styling modular, reusable, and easy to maintain.
 
